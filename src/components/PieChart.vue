@@ -18,8 +18,9 @@ const data = [
             <Tooltip
                 borderColor="#f8f8f8"
                 :config="{
-                year: { label: 'year', color: '#27928f' },
-                avg: { label: 'attendees', color: '#27928f' },
+                pie: { label: 'pie', color: '#27928f' },
+                votes: { label: 'votes', color: '#27928f' },
+                color: {hide: true}
                 }"
             />
         </template>
@@ -37,6 +38,10 @@ const data = [
 <style>
 .chart {
     display:flex;
+
+    @media (max-width: 767px) {
+        flex-direction: column-reverse;
+    }
 }
 .pie-chart .axis {
     display: none;

@@ -29,8 +29,14 @@ import NavMenu from '@/components/navigation/NavMenu.vue'
 .content {
   margin: auto;
   display: flex;
+  text-align: center;
+  gap: 2rem;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   height: 100%;
+
+  @media (min-width: 768px) {
+    gap: 6rem;
+  }
 } 
 </style>

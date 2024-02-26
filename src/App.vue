@@ -1,85 +1,133 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import MenuImg from '@/assets/svgs/MenuImg.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <MenuImg/>
+        <div class="main-nav-list">
+          <RouterLink :to="{name: 'bar'}">Bars</RouterLink>
+          <RouterLink :to="{name: 'line'}">Lines</RouterLink>
+          <RouterLink :to="{name: 'chart'}">Pie</RouterLink>
+        </div>
+        
       </nav>
-    </div>
   </header>
-
-  <RouterView />
+  <div class="main">
+    <RouterView />
+  </div>
+ 
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
 
 nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
+  display: flex;
+  position:fixed;
+  top: 0;
+  background-color: var(--color-background-soft);
+  box-shadow: 0px 0px 15px var(--color-shadow);
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+  /** Mobile Only styling */
+  @media (max-width: 767px) {
+    padding: 1rem;
+    width: 100%;
+  }
+  /** desktop only styling */
+  @media (min-width: 768px) {
+    flex-direction: column;
+    width: var(--nav-width);
+    height: 100vh;
+    
+  }
 }
 
 nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  color: var(--ks-white);
+  text-decoration: none;
+  position: relative;
+
+  &::hover {
+
+  }
 }
 
-nav a:first-of-type {
-  border: 0;
+nav a.router-link-active {
+  font-weight: bold;
+  background: var(--color-background)
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+
+/** Mobile Only styling for menu */
+
+@media (max-width: 767px) {
+  .main-nav-list{
+    height:0;
+    margin-bottom: 2rem;
+    width: 100%;
+    transition-property: transform;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition-duration: .25s;
+    transition-timing-function: cubic-bezier(.6,.13,.32,1.46);  
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  .main-nav-list a{
+      display: block;
+      font-size: 1.5em;
+      margin-bottom: 8px;
+      transition-property: opacity;
+      opacity: 0;
+      transition-duration: .15s;
   }
+}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+/** Hover State */
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
+/* Brackets go out */
+/* nav a:before, nav a:after
+{
+    position: absolute;
+    opacity: 0;
+    font-size: 35px;
+    top: 0px;
+    transition: all 0.3s;
+}
 
-    padding: 1rem 0;
-    margin-top: 1rem;
+nav a:before
+{
+    content: '(';
+    left: 0px;
+    transform: translateX(10px);
+}
+nav a:after
+{
+    content: ')';
+    right: 0px;
+    transform: translateX(-10px);
+}
+
+nav a:hover:before, nav a:hover:after
+{
+    opacity: 1;
+    transform: translateX(0px);
+}
+ */
+
+
+
+.main {
+  margin-top: 4rem;
+
+  @media (min-width: 768px) {
+    margin-left: var(--nav-width);
+    margin-top: 0;
   }
 }
 </style>

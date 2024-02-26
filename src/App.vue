@@ -18,10 +18,11 @@ import NavMenu from '@/components/navigation/NavMenu.vue'
 <style scoped>
 .main {
   margin-top: 4rem;
-
+  padding-top: 2rem;
   @media (min-width: 768px) {
     margin-left: var(--nav-width);
     margin-top: 0;
+    height: 100vh;
   }
 }
 
@@ -30,6 +31,6 @@ import NavMenu from '@/components/navigation/NavMenu.vue'
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
 } 
 </style>

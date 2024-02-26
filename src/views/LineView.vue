@@ -1,5 +1,8 @@
+<script setup>
+import LineChart from '@/components/LineChart.vue'
+</script>
 <template>
-  Lines
+  <LineChart/>
 </template>
 
 <style>

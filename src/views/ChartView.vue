@@ -1,8 +1,9 @@
 <script setup>
+import PieChart from '@/components/PieChart.vue'
 </script>
 
 <template>
-  <main>
-    Charts
+  <main class="pie-chart">
+    <PieChart/>
   </main>
 </template>

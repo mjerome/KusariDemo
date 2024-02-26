@@ -11,7 +11,7 @@ const data = [
 <template>
     <div>
         <Chart
-            :size="{ width: 500, height: 500 }"
+            :size="{ width: 700, height: 600 }"
             :data="data"
             direction="horizontal">
 

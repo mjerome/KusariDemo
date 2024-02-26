@@ -26,7 +26,7 @@ const data = [
 </script>
 <template>
     <Chart
-    :size="{ width: 500, height: 420 }"
+    :size="{ width: 700, height: 500 }"
     :data="data"
     direction="horizontal">
 
@@ -37,7 +37,6 @@ const data = [
 
     <template #widgets>
       <Tooltip
-        borderColor="#f8f8f8"
         :config="{
           year: { label: 'year', color: '#27928f' },
           avg: { label: 'attendees', color: '#27928f' },

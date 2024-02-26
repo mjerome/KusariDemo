@@ -1,6 +1,11 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import NavMenu from '@/components/navigation/NavMenu.vue'
+
+// TODO:
+// ADD Dark Mode/Light Mode
+// Accessibility - Replace Input with Button, check Accessibility of vue charts. 
+// Clean up CSS
 </script>
 
 <template>
@@ -19,6 +24,7 @@ import NavMenu from '@/components/navigation/NavMenu.vue'
 .main {
   margin-top: 4rem;
   padding-top: 2rem;
+  padding-inline: 1rem;
   @media (min-width: 768px) {
     margin-left: var(--nav-width);
     margin-top: 0;

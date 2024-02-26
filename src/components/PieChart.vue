@@ -9,18 +9,19 @@ const data = [
 </script>
 <template>
     <Chart
-        :size="{ width: 500, height: 420 }"
+        :size="{ width: 500, height: 500 }"
         :data="data"
         direction="circular"
     >
         <template #widgets>
             <LegendLayer :dataKeys="data"/>
             <Tooltip
-                borderColor="#f8f8f8"
+                :hide-line="true"
+                borderColor="#ffffff"
                 :config="{
-                pie: { label: 'pie', color: '#27928f' },
-                votes: { label: 'votes', color: '#27928f' },
-                color: {hide: true}
+                    pie: { label: 'pie', color: '#27928f' },
+                    votes: { label: 'votes', color: '#27928f' },
+                    color: {hide: true}
                 }"
             />
         </template>

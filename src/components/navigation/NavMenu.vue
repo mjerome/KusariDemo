@@ -39,9 +39,13 @@ nav a {
   display: block;
   padding: 1rem;
   text-align: center;
-  color: var(--ks-white);
+  color: var(--color-text);
   text-decoration: none;
   position: relative;
+}
+
+nav a:hover {
+  background: var(--color-background)
 }
 
 nav a.router-link-active {

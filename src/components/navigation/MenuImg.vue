@@ -32,9 +32,9 @@
         width: 42px;
     }
     .burger div{
-        background-color: #ccc;
+        background-color: var(--color-menu);
         border-radius: 25px;
-        box-shadow: 1px .4px 10px rgba(0,0,0,.4);
+        box-shadow: 1px .4px 4px rgba(0,0,0,.4);
         height: 5px;
         transition-duration: .25s;
         transition-timing-function: cubic-bezier(.6,.13,.32,1.46);

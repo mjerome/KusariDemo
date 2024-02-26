@@ -8,6 +8,16 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/',
+      name: 'home',
+      redirect: {
+        // the function receives the target route as the argument
+        // a relative location doesn't start with `/`
+        // or { path: 'profile'}
+        name: 'bar'
+      }
+    },
+    {
       path: '/customer/yahoo/bar',
       name: 'bar',
       component: BarView

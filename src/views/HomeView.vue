@@ -4,24 +4,27 @@ import LineChart from '@/components/LineChart.vue';
 import PieChart from '@/components/PieChart.vue';
 </script>
 <template>
-    <h1>Home</h1>
+    <h1>Chart Dashboard</h1>
     <div class="link-container">
         <RouterLink :to="{name: 'bar'}" class="link-square">
             <div >
-                <BarChart :tooltip="false" />
                 <div class="link-text"> View Bar Chart Data</div>
+                <BarChart :tooltip="false" />
+                
             </div>   
         </RouterLink>
         <RouterLink :to="{name: 'bar'}" class="link-square">
             <div>
-                <LineChart :tooltip="false" />
                 <div class="link-text"> View Line Chart Data</div>
+                <LineChart :tooltip="false" />
+                
             </div>   
         </RouterLink>
         <RouterLink :to="{name: 'bar'}" class="link-square">
             <div class="pie-chart">
-                <PieChart :tooltip="false" :legend="false" />
                 <div class="link-text"> View Pie Chart Data</div>
+                <PieChart :tooltip="false" :legend="false" />
+                
             </div>   
         </RouterLink>
     </div>
@@ -45,19 +48,27 @@ import PieChart from '@/components/PieChart.vue';
     text-decoration: none;
     display: flex; 
     justify-content: center;
-    color: var(--color-text)
+    align-items:center;
+    color: var(--color-text);
+}
+
+.link-square:hover {
+    border-bottom: 1px solid var(--color-border-teal);
+    border-left: 1px solid var(--color-border-teal);
 }
 
 .link-square > div {
+    width: 80%;
     scale: 1;
-    transition: scale 0.25s ease-out;
+    transition: all 0.25s ease-out;
 }
 
 .link-square:hover > div {
     scale: 1.1;
+    font-size: 1rem;
 }
 
 .link-text {
-    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
 </style>

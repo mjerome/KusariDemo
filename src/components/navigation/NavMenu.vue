@@ -6,6 +6,7 @@ import MenuImg from './MenuImg.vue'
     <nav>
         <MenuImg/>
         <div class="main-nav-list">
+            <RouterLink :to="{name: 'home'}">Home</RouterLink>
             <RouterLink :to="{name: 'bar'}">Bars</RouterLink>
             <RouterLink :to="{name: 'line'}">Lines</RouterLink>
             <RouterLink :to="{name: 'chart'}">Pie</RouterLink>

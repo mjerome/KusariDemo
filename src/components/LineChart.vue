@@ -7,7 +7,15 @@ const props = defineProps({
   tooltip: {
     type: Boolean,
     default: true
-  }
+  },
+  width: {
+        type: Number,
+        default: 700
+    },
+    height: {
+        type: Number,
+        default: 700
+    }
 })
 const data = [
   { year: '03', attendees: 25000 },
@@ -40,7 +48,7 @@ const data = [
       </div>
     </GraphLabelLayer>
     <Chart
-    :size="{ width: 700, height: 500 }"
+    :size="{ width: props.width, height: props.height }"
     :data="data"
     direction="horizontal">
 

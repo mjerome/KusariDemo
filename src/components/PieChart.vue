@@ -11,7 +11,15 @@ const props = defineProps({
   legend: {
     type: Boolean,
     default: true
-  }
+  },
+  width: {
+        type: Number,
+        default: 700
+    },
+    height: {
+        type: Number,
+        default: 700
+    }
 })
 const data = [
   { pie: 'Apple', votes: 47, color: '#30b2af' },
@@ -26,7 +34,7 @@ const data = [
         </div>
     </GraphLabelLayer>
     <Chart
-        :size="{ width: 500, height: 500 }"
+        :size="{ width: props.width, height: props.height }"
         :data="data"
         direction="circular"
     >

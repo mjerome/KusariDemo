@@ -17,7 +17,7 @@
 :root {
   --color-background: var(--ks-black);
   --color-background-soft: var(--ks-black-soft);
-
+  --color-border-teal: var(--ks-teal);
   --color-border: var(--ks-white-soft);
   --color-text: var(--ks-white-soft);
   --color-menu: var(--ks-white);
@@ -29,7 +29,7 @@
   :root {
     --color-background: var(--ks-white);
     --color-background-soft: var(--ks-white-soft);
-  
+    --color-border-hard: var(--ks-black);
     --color-border: var(--ks-black-soft);
     --color-text: var(--ks-black-soft);
     --color-menu: var(--ks-black);

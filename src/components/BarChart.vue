@@ -23,7 +23,6 @@ const data = [
 
             <template #layers>
             <Grid strokeDasharray="2,2" />
-            
             <Bar :dataKeys="['trilogy', 'one']" :barStyle="{ fill: '#30b2af' }" />
             <Bar :dataKeys="['trilogy', 'two']" :barStyle="{ fill: '#72ccff' }" />
             <Bar :dataKeys="['trilogy', 'three']" :barStyle="{ fill: '#da01ff' }" />

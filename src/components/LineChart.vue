@@ -38,9 +38,7 @@ const data = [
 
     <template #layers>
       <Grid strokeDasharray="2,2" />
-      
       <Line :dataKeys="['year', 'attendees']" :lineStyle="{ stroke: '#27928f' }" type="natural" />
-      
     </template>
 
     <template #widgets>

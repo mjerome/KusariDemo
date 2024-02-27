@@ -6,7 +6,6 @@ const toggleMenu = () => {
 }
 </script>
 <template>
-    <!-- <input type="checkbox" name="" id="input__menu-toggle" class="menu-toggle"/> -->
     <button aria-label="Menu" class="masthead" @click="toggleMenu" :data-open="isMenuOpen">
         <div class="burger">
             <div class="one"></div>

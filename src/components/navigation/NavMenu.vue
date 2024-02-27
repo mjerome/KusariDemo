@@ -46,7 +46,8 @@ nav a {
 }
 
 nav a:hover {
-  background: var(--color-background)
+  background: var(--color-background);
+  color: var(--color-text-hover);
 }
 
 nav a.router-link-active {

@@ -53,8 +53,9 @@ import PieChart from '@/components/PieChart.vue';
 }
 
 .link-square:hover {
-    border-bottom: 1px solid var(--color-border-teal);
-    border-left: 1px solid var(--color-border-teal);
+    color: var(--color-text-hover);
+    border-bottom: 1px solid var(--color-border-hover);
+    border-left: 1px solid var(--color-border-hover);
 }
 
 .link-square > div {

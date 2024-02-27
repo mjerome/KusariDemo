@@ -4,6 +4,7 @@
   --ks-black-hard: #0b0e11;
   --ks-black-soft: #192027;
   --ks-pink: #da01ff;
+  --ks-teal-dark: #378684;
   --ks-teal: #30b2af;
   --ks-blue: #72ccff; 
   --ks-white: #ffffff;
@@ -17,9 +18,10 @@
 :root {
   --color-background: var(--ks-black);
   --color-background-soft: var(--ks-black-soft);
-  --color-border-teal: var(--ks-teal);
+  --color-border-hover: var(--ks-teal);
   --color-border: var(--ks-white-soft);
   --color-text: var(--ks-white-soft);
+  --color-text-hover: var(--ks-teal);
   --color-menu: var(--ks-white);
   --color-shadow: var(--ks-black-hard);
   --section-gap: 160px;
@@ -29,9 +31,10 @@
   :root {
     --color-background: var(--ks-white);
     --color-background-soft: var(--ks-white-soft);
-    --color-border-hard: var(--ks-black);
+    --color-border-hover: var(--ks-teal-dark);
     --color-border: var(--ks-black-soft);
     --color-text: var(--ks-black-soft);
+    --color-text-hover: var(--ks-teal-dark);
     --color-menu: var(--ks-black);
     --color-shadow: var(--ks-grey);
   }

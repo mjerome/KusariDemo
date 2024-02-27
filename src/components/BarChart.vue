@@ -8,6 +8,12 @@ const data = [
   { trilogy: 'Nolan Batman', one: 70, two: 84, three: 78 },
   { trilogy: 'Toy Story', one: 96, two: 88, three: 92 },
 ]
+const props = defineProps({
+    tooltip: {
+        type: Boolean,
+        default: true
+    }
+})
 </script>
 <template>
     <div>
@@ -29,7 +35,7 @@ const data = [
             </template>
 
             <template #widgets>
-            <Tooltip
+            <Tooltip v-if="props.tooltip"
                 borderColor="#f8f8f8"
                 :config="{
                 one: { color: '#30b2af' },
@@ -45,6 +51,7 @@ const data = [
 <style>
     svg {
         overflow: visible;
+        height: 100%;
         width: 90% !important;
         margin: auto;
         display: block;

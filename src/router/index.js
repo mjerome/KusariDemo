@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import BarView from '../views/BarView.vue'
 
+const Home = () => import('../views/HomeView.vue')
+
 const LineView = () => import('../views/LineView.vue')
 const ChartView = () => import('../views/ChartView.vue')
 
@@ -10,12 +12,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      redirect: {
-        // the function receives the target route as the argument
-        // a relative location doesn't start with `/`
-        // or { path: 'profile'}
-        name: 'bar'
-      }
+      component: Home
     },
     {
       path: '/customer/yahoo/bar',

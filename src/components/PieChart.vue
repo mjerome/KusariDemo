@@ -2,6 +2,17 @@
 import { Chart, Pie, Tooltip } from 'vue3-charts';
 import LegendLayer from './LegendLayer.vue';
 import GraphLabelLayer from './GraphLabelLayer.vue';
+
+const props = defineProps({
+  tooltip: {
+    type: Boolean,
+    default: true
+  },
+  legend: {
+    type: Boolean,
+    default: true
+  }
+})
 const data = [
   { pie: 'Apple', votes: 47, color: '#30b2af' },
   { pie: 'Pecan', votes: 20, color: '#72ccff' },
@@ -20,8 +31,8 @@ const data = [
         direction="circular"
     >
         <template #widgets>
-            <LegendLayer :dataKeys="data"/>
-            <Tooltip
+            <LegendLayer :dataKeys="data" v-if="props.legend"/>
+            <Tooltip v-if="props.tooltip"
                 :hide-line="true"
                 borderColor="#ffffff"
                 :config="{

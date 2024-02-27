@@ -1,6 +1,14 @@
 <script setup>
+import { defineProps } from 'vue';
 import { Chart, Grid, Line, Tooltip } from 'vue3-charts';
 import GraphLabelLayer from './GraphLabelLayer.vue';
+
+const props = defineProps({
+  tooltip: {
+    type: Boolean,
+    default: true
+  }
+})
 const data = [
   { year: '03', attendees: 25000 },
   { year: '04', attendees: 21741 },
@@ -42,7 +50,7 @@ const data = [
     </template>
 
     <template #widgets>
-      <Tooltip
+      <Tooltip v-if="props.tooltip"
         :config="{
           year: { label: 'year', color: '#27928f' },
           avg: { label: 'attendees', color: '#27928f' },

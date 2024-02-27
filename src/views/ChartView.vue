@@ -4,7 +4,7 @@ import PieChart from '@/components/PieChart.vue'
 
 <template>
   <h1>Thanksgiving Pie Pie Chart of Pie</h1>
-  <main class="pie-chart">
+  <div class="pie-chart">
     <PieChart/>
-  </main>
+  </div>
 </template>

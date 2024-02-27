@@ -58,7 +58,7 @@ nav a.router-link-active {
 
 @media (max-width: 767px) {
   .main-nav-list{
-    height:0;
+    max-height:0;
     width: 100%;
     transition-property: transform;
     transform: scale(1,0);

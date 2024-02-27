@@ -1,15 +1,21 @@
 <script setup>
 import { Chart, Bar, Tooltip, Grid } from 'vue3-charts'
+import GraphLabelLayer from './GraphLabelLayer.vue';
 const data = [
-  { trilogy: 'Lord of the Rings', 1: 92, 2: 87, 3: 94 },
-  { trilogy: 'The Godfather', 1: 100, 2: 90, 3: 60 },
-  { trilogy: 'Star Wars (OT)', 1: 90, 2: 82, 3: 58 },
-  { trilogy: 'Nolan Batman', 1: 70, 2: 84, 3: 78 },
-  { trilogy: 'Toy Story', 1: 96, 2: 88, 3: 92 },
+  { trilogy: 'Lord of the Rings', one: 92, two: 87, three: 94 },
+  { trilogy: 'The Godfather', one: 100, two: 90, three: 60 },
+  { trilogy: 'Star Wars (OT)', one: 90, two: 82, three: 58 },
+  { trilogy: 'Nolan Batman', one: 70, two: 84, three: 78 },
+  { trilogy: 'Toy Story', one: 96, two: 88, three: 92 },
 ]
 </script>
 <template>
     <div>
+        <GraphLabelLayer description="Ratings of each movie in the most popular movie trilogies">
+            <div v-for="data in data" :key="data">
+                <span>{{ data.trilogy }}, {{ data.one }}%, {{ data.two }}%, {{ data.three }}%</span>
+            </div>
+        </GraphLabelLayer>
         <Chart
             :size="{ width: 700, height: 600 }"
             :data="data"
@@ -17,18 +23,19 @@ const data = [
 
             <template #layers>
             <Grid strokeDasharray="2,2" />
-            <Bar :dataKeys="['trilogy', '1']" :barStyle="{ fill: '#30b2af' }" />
-            <Bar :dataKeys="['trilogy', '2']" :barStyle="{ fill: '#72ccff' }" />
-            <Bar :dataKeys="['trilogy', '3']" :barStyle="{ fill: '#da01ff' }" />
+            
+            <Bar :dataKeys="['trilogy', 'one']" :barStyle="{ fill: '#30b2af' }" />
+            <Bar :dataKeys="['trilogy', 'two']" :barStyle="{ fill: '#72ccff' }" />
+            <Bar :dataKeys="['trilogy', 'three']" :barStyle="{ fill: '#da01ff' }" />
             </template>
 
             <template #widgets>
             <Tooltip
                 borderColor="#f8f8f8"
                 :config="{
-                1: { color: '#30b2af' },
-                2: { color: '#72ccff' },
-                3: { color: '#da01ff' }
+                one: { color: '#30b2af' },
+                two: { color: '#72ccff' },
+                three: { color: '#da01ff' }
                 }"
             />
             </template>

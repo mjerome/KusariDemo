@@ -12,11 +12,11 @@ import NavMenu from '@/components/navigation/NavMenu.vue'
   <header>
     <NavMenu/>
   </header>
-  <div class="main">
+  <main class="main">
     <div class="content">
       <RouterView />
     </div>
-  </div>
+  </main>
  
 </template>
 

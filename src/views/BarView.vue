@@ -4,7 +4,7 @@ import BarChart from '@/components/BarChart.vue'
 
 <template>
   <h1>Best Trilogies Ratings</h1>
-  <main>
+  <div>
     <BarChart />
-  </main>
+  </div>
 </template>

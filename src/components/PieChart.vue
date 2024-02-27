@@ -1,6 +1,7 @@
 <script setup>
 import { Chart, Pie, Tooltip } from 'vue3-charts';
 import LegendLayer from './LegendLayer.vue';
+import GraphLabelLayer from './GraphLabelLayer.vue';
 const data = [
   { pie: 'Apple', votes: 47, color: '#30b2af' },
   { pie: 'Pecan', votes: 20, color: '#72ccff' },
@@ -8,6 +9,11 @@ const data = [
 ]
 </script>
 <template>
+    <GraphLabelLayer description="Votes for which pie is best for Thanksgiving">
+        <div v-for="data in data" :key="data">
+            <span>{{ data.pie }} {{ data.votes }}</span>
+        </div>
+    </GraphLabelLayer>
     <Chart
         :size="{ width: 500, height: 500 }"
         :data="data"

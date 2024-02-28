@@ -44,12 +44,15 @@ import PieChart from '@/components/PieChart.vue';
     border-left: 1px solid var(--color-border);
     padding: 2rem;
     aspect-ratio: 1;
-    width:45%;
     text-decoration: none;
     display: flex; 
     justify-content: center;
     align-items:center;
     color: var(--color-text);
+
+    @media (min-width: 768px) {
+        width:45%;
+    }
 }
 
 .link-square:hover {

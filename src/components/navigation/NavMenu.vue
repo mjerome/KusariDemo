@@ -62,7 +62,7 @@ nav a.router-link-active {
   .main-nav-list{
     max-height:0;
     width: 100%;
-    transition-property: transform;
+    transition-property: all;
     transform: scale(1,0);
     transform-origin: top;
     transition-duration: .25s;
